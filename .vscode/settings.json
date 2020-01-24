@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/Users/blakelobato/.local/share/virtualenvs/lambdata_bpl-vaIPBnMz/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.mypyEnabled": true,
+    "python.linting.enabled": true
+}

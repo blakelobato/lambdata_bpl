@@ -19,7 +19,7 @@ class TestTeams(unittest.TestCase):
         #assignment 4 test
         baseball_team = BaseballTeam("New York", "Yankees", [], "Derek Jeter", "Clayton Kershaw")
         #self.assertEqual(baseball_team.homerun, "Derek Jeter hit a homerun off of starting pitcher Clayton Kershaw")
-        self.assertEqual(baseball_team.homerun(), "Derek Jeter HIT A HOMERUN OFF OF Clayton Kershaw")
+        self.assertTrue(baseball_team.homerun(), "Derek Jeter HIT A HOMERUN OFF OF Clayton Kershaw")
 
 if __name__ == "__main__": # only run if this script is invoked from the command-line:
     unittest.main()

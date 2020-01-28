@@ -1,5 +1,5 @@
 from random import randint, sample, uniform, choice
-from app.acme import Product
+from acme import Product
 
 # Useful to use with random.sample to generate names
 ADJECTIVES = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
@@ -24,28 +24,29 @@ def flame():
 
 def generate_products(num_products=30):
     """Create empty products list and append necessary info to each"""
+    num_products = 50
     products = []
-    for _ in range(num_products):
+    for _ in range(0, num_products):
         products.append(Product(adj_noun_name(), pricetags(), weightscales(), flame(), randint(1000000, 9999999)))
-        return products
+    return products
 
 def inventory_report(products):
     """Generates inventory report"""
     unique_adj_noun = []
     prices=0
     weights=0
-    flame=0
+    flames=0
     
     for product in products:
         if product.name not in unique_adj_noun:
             unique_adj_noun.append(product.name)
         prices += product.price
         weights += product.weight
-        flame += product.flame
+        flames += product.flammability
 
     ave_p = prices/len(products)
     ave_w = weights/len(products)
-    ave_f = flame/len(products)
+    ave_f = flames/len(products)
 
     print('ACME CORPORAATION OFFICIAL INVENTORY REPORT')
 

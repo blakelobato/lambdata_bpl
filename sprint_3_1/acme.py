@@ -5,7 +5,7 @@ import random
 from random import randint
 
 class Product():
-    def __init__(self, name, price=10, weight=20, flammability=.5, identifier= random.randint(1000000, 9999999)):
+    def __init__(self, name, price=10, weight=20, flammability=.5, identifier=random.randint(1000000, 9999999)):
         self.name = name
         self.price = price
         self.weight = weight
@@ -68,7 +68,7 @@ class BoxingGlove(Product):
 
 if __name__ =="__main__":
     #checks
-    prod=Product('A Cool Toy', 15, 25, .7, 12)
+    prod=Product('A Cool Toy')
     print(prod.name)
     print(prod.price)
     print(prod.weight)
@@ -77,7 +77,7 @@ if __name__ =="__main__":
     prod.explode()
     prod.stealability()
 
-    glove = BoxingGlove('Glover', 1000, 1000, .1, 1000)
+    glove = BoxingGlove('Glover')
     print(glove.weight)
     glove.punch()
     glove.explode()

@@ -14,4 +14,4 @@ def test_example():
     assert team.full_name == "New York Giants"
 
     if __name__ == "__main__": #only run if this script is invoked from the command line
-        unnittest.main()
+        unittest.main()
